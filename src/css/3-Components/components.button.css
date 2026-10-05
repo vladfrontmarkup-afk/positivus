@@ -1,6 +1,7 @@
 @layer components {
   .c-button {
     @apply inline-flex items-center justify-center rounded-lg bg-dark font-normal text-white cursor-pointer p-20 text-20;
+    @apply transition-[opacity,background-color,color] duration-300 motion-reduce:transition-none;
 
     &:hover {
       @apply opacity-75;

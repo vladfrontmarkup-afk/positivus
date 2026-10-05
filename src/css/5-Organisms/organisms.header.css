@@ -1,0 +1,119 @@
+@layer components {
+  .o-header {
+    @apply sticky top-0 z-50 text-black transition-[padding] duration-300 ease-in-out;
+    @apply motion-reduce:transition-none;
+  }
+
+  .o-header__bar {
+    @apply relative py-16 bg-white transition-[padding,box-shadow] duration-300 ease-in-out;
+    @apply desktop:py-20 motion-reduce:transition-none;
+  }
+
+  .o-header-scroll-lock {
+    @apply overflow-hidden;
+  }
+
+  .o-header__inner {
+    @apply flex items-center justify-between gap-16 desktop:gap-24;
+  }
+
+  .o-header__logo {
+    @apply block shrink-0 origin-left transition-transform duration-300 ease-in-out;
+    @apply motion-reduce:transition-none;
+  }
+
+  .o-header__toggle {
+    @apply flex flex-col items-center justify-center gap-5 px-13 py-14 shrink-0 cursor-pointer;
+    @apply sm-laptop:hidden;
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-4 outline-dark;
+    }
+  }
+
+  .o-header__toggle-line {
+    @apply block w-26 h-2 bg-dark transition-[translate,rotate,opacity] duration-300 ease-in-out;
+    @apply motion-reduce:transition-none;
+  }
+
+  .o-header__navigation {
+    /* Burger: 3 × 2px lines + 2 × 5px gaps + 2 × 14px padding = 44px. */
+    @apply invisible fixed top-[calc(44px_+_16px_*_2)] bottom-0 inset-x-0 flex flex-col items-stretch gap-24 px-24 py-24 bg-white opacity-0 pointer-events-none -translate-y-8 overflow-y-auto;
+    @apply shadow-[0_10px_20px_-12px_rgb(25_26_35/0.2)] transition-none;
+    @apply sm-laptop:visible sm-laptop:static sm-laptop:flex-row sm-laptop:items-center sm-laptop:gap-20 sm-laptop:p-0 sm-laptop:opacity-100 sm-laptop:pointer-events-auto sm-laptop:translate-y-0 sm-laptop:shadow-none sm-laptop:overflow-visible;
+    @apply desktop:gap-40;
+  }
+
+  .o-header--menu-animated {
+    .o-header__navigation {
+      @apply transition-[opacity,translate,visibility,top] duration-300 ease-in-out;
+      @apply sm-laptop:transition-none motion-reduce:transition-none;
+    }
+  }
+
+  .o-header__list {
+    @apply flex flex-col gap-16 sm-laptop:flex-row sm-laptop:items-center desktop:gap-40;
+  }
+
+  .o-header__link {
+    @apply block py-4 text-20 leading-28 whitespace-nowrap underline underline-offset-4 decoration-transparent transition-[color,text-decoration-color] duration-300;
+    @apply sm-laptop:py-0 sm-laptop:text-18 desktop:text-20 motion-reduce:transition-none;
+
+    &:hover {
+      @apply decoration-current;
+    }
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-4 outline-dark;
+    }
+  }
+
+  .o-header__button {
+    @apply border border-dark rounded-[14px] bg-transparent text-black py-20 px-35 leading-28 whitespace-nowrap;
+    @apply shrink-0 sm-laptop:px-24 sm-laptop:text-18 desktop:px-35 desktop:text-20;
+    @apply transition-[padding,background-color,color] duration-300 ease-in-out motion-reduce:transition-none;
+
+    &:hover {
+      @apply bg-dark text-white opacity-100;
+    }
+  }
+
+  .o-header--sticky {
+    /* Compensate for reduced bar/button padding to keep the page from shifting. */
+    @apply pb-16 sm-laptop:pb-28;
+
+    .o-header__bar {
+      @apply py-8 shadow-[0_4px_16px_rgb(25_26_35/0.08)] desktop:py-12;
+    }
+
+    .o-header__navigation {
+      @apply top-[calc(44px_+_8px_*_2)];
+    }
+
+    .o-header__logo {
+      @apply scale-95;
+    }
+
+    .o-header__button {
+      @apply sm-laptop:py-14;
+    }
+  }
+
+  .o-header--menu-open {
+    .o-header__navigation {
+      @apply visible opacity-100 pointer-events-auto translate-y-0;
+    }
+
+    .o-header__toggle-line:nth-child(1) {
+      @apply translate-y-7 rotate-45;
+    }
+
+    .o-header__toggle-line:nth-child(2) {
+      @apply opacity-0;
+    }
+
+    .o-header__toggle-line:nth-child(3) {
+      @apply -translate-y-7 -rotate-45;
+    }
+  }
+}
