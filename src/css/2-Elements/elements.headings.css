@@ -1,0 +1,25 @@
+@layer base {
+  h1 {
+    @apply text-40 font-medium leading-tight text-black;
+  }
+
+  h2 {
+    @apply text-32 font-medium leading-tight;
+  }
+
+  h3 {
+    @apply text-24 font-medium;
+  }
+
+  h4 {
+
+  }
+
+  h5 {
+
+  }
+
+  h6 {
+    
+  }
+}

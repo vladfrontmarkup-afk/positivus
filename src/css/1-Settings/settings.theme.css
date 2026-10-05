@@ -1,0 +1,43 @@
+@theme {
+  --spacing: 1px;
+
+  /* Breakpoints */
+	--breakpoint-*: initial;
+	--breakpoint-mobile: 540px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-sm-laptop: 992px;
+	--breakpoint-laptop: 1024px;
+	--breakpoint-desktop: 1300px;
+	--breakpoint-l-desktop: 1440px;
+	--breakpoint-large: 1680px;
+
+  /* Colors */
+	--color-*: initial;
+	--color-current: currentColor;
+	--color-transparent: transparent;
+	--color-black: #000000;
+	--color-white: #ffffff;
+  --color-green: #b9ff66;
+  --color-dark: #191a23;
+  --color-dark-light: #292a32;
+  --color-grey: #f3f3f3;
+  --color-grey-muted: #898989;
+  
+  /* Font families */
+  --font-default: "Space Grotesk", sans-serif;
+  --font-sans: "Space Grotesk", sans-serif;
+
+  /* Font sizes */
+  --text-*: initial;
+  --text-base: 16px;
+ 
+  /* Line heights */
+  --leading-10: 1;
+  --leading-11: 1.1;
+  --leading-115: 1.15;
+  --leading-12: 1.2;
+  --leading-125: 1.25;
+
+  /* Border radius */
+	--radius-full: 100%;
+}
