@@ -9,13 +9,18 @@
   }
 
   .s-heading__title {
-    @apply shrink-0 max-w-full px-7 rounded-[7px] bg-secondary text-32 font-medium leading-[normal];
+    @apply shrink-0 max-w-full px-7 rounded-[7px] bg-secondary text-32 font-medium leading-[1.275];
     @apply tablet:text-36 desktop:text-40 desktop:whitespace-nowrap;
   }
 
   .s-heading__description {
-    @apply w-full max-w-580 text-16 font-normal leading-[normal];
+    @apply w-full max-w-580 text-16 font-normal leading-[1.27];
     @apply tablet:w-580 tablet:text-18;
+
+    * {
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   .s-heading__description br {
