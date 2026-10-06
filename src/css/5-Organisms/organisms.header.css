@@ -27,12 +27,12 @@
     @apply sm-laptop:hidden;
 
     &:focus-visible {
-      @apply outline-2 outline-offset-4 outline-dark;
+      @apply outline-2 outline-offset-4 outline-primary;
     }
   }
 
   .o-header__toggle-line {
-    @apply block w-26 h-2 bg-dark transition-[translate,rotate,opacity] duration-300 ease-in-out;
+    @apply block w-26 h-2 bg-primary transition-[translate,rotate,opacity] duration-300 ease-in-out;
     @apply motion-reduce:transition-none;
   }
 
@@ -64,18 +64,12 @@
     }
 
     &:focus-visible {
-      @apply outline-2 outline-offset-4 outline-dark;
+      @apply outline-2 outline-offset-4 outline-primary;
     }
   }
 
-  .o-header__button {
-    @apply border border-dark rounded-[14px] bg-transparent text-black py-20 px-35 leading-28 whitespace-nowrap;
-    @apply shrink-0 sm-laptop:px-24 sm-laptop:text-18 desktop:px-35 desktop:text-20;
-    @apply transition-[padding,background-color,color] duration-300 ease-in-out motion-reduce:transition-none;
-
-    &:hover {
-      @apply bg-dark text-white opacity-100;
-    }
+  .o-header .c-button {
+    @apply shrink-0;
   }
 
   .o-header--sticky {
@@ -94,9 +88,6 @@
       @apply scale-95;
     }
 
-    .o-header__button {
-      @apply sm-laptop:py-14;
-    }
   }
 
   .o-header--menu-open {

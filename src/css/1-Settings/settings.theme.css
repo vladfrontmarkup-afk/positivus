@@ -17,11 +17,11 @@
 	--color-transparent: transparent;
 	--color-black: #000000;
 	--color-white: #ffffff;
-  --color-green: #b9ff66;
-  --color-dark: #191a23;
-  --color-dark-light: #292a32;
-  --color-grey: #f3f3f3;
-  --color-grey-muted: #898989;
+  --color-primary: #191a23;
+  --color-secondary: #b9ff66;
+  --color-dark-100: #292a32;
+  --color-grey-100: #f3f3f3;
+  --color-grey-500: #898989;
   
   /* Font families */
   --font-default: "Space Grotesk", sans-serif;

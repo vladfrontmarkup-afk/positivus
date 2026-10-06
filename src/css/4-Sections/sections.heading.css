@@ -1,0 +1,24 @@
+@layer components {
+  .s-heading {
+    @apply my-40 tablet:my-60 desktop:my-80 text-black;
+  }
+
+  .s-heading__inner {
+    @apply flex flex-col items-center gap-24 text-center;
+    @apply tablet:flex-row tablet:items-start tablet:gap-40 tablet:text-left;
+  }
+
+  .s-heading__title {
+    @apply shrink-0 max-w-full px-7 rounded-[7px] bg-secondary text-32 font-medium leading-[normal];
+    @apply tablet:text-36 desktop:text-40 desktop:whitespace-nowrap;
+  }
+
+  .s-heading__description {
+    @apply w-full max-w-580 text-16 font-normal leading-[normal];
+    @apply tablet:w-580 tablet:text-18;
+  }
+
+  .s-heading__description br {
+    @apply hidden sm-laptop:block;
+  }
+}

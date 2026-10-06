@@ -23,8 +23,8 @@
     @apply tablet:text-20 tablet:leading-28 sm-laptop:order-none sm-laptop:max-w-498;
   }
 
-  .s-hero__button {
-    @apply order-4 w-full py-20 px-35 rounded-[14px] text-20 leading-28;
+  .s-hero .c-button {
+    @apply order-4 w-full;
     @apply sm-laptop:order-none sm-laptop:w-auto;
   }
 

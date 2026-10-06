@@ -4,10 +4,13 @@ export function initHeader() {
 
   const toggle = header.querySelector('.js--header-toggle');
   const navigation = header.querySelector('.js--header-navigation');
+  const button = header.querySelector('.js--header-button');
   let framePending = false;
 
   const updateSticky = () => {
-    header.classList.toggle('o-header--sticky', window.scrollY > 0);
+    const isSticky = window.scrollY > 0;
+    header.classList.toggle('o-header--sticky', isSticky);
+    button?.classList.toggle('c-button__compact', isSticky && getComputedStyle(toggle).display === 'none');
     framePending = false;
   };
 
