@@ -1,6 +1,7 @@
 @import "./common.css";
 @import "./3-Components/components.button.css";
 @import "./4-Sections/sections.section.css";
+@import "./4-Sections/sections.hero.css";
 @import "./4-Sections/sections.cta.css";
 @import "./5-Organisms/organisms.css";
 @import "./5-Organisms/organisms.header.css";

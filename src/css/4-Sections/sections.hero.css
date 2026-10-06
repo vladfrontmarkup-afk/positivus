@@ -1,0 +1,52 @@
+@layer components {
+  .s-hero {
+    @apply py-40 tablet:py-60 desktop:py-80 text-black;
+  }
+
+  .s-hero__intro {
+    @apply grid gap-28 items-start;
+    @apply tablet:gap-35 sm-laptop:grid-cols-[minmax(0,1fr)_minmax(0,1.13fr)] sm-laptop:gap-40;
+    @apply desktop:grid-cols-[531px_601px] desktop:gap-108;
+  }
+
+  .s-hero__content {
+    @apply contents sm-laptop:flex sm-laptop:flex-col sm-laptop:items-start sm-laptop:gap-35;
+  }
+
+  .s-hero__title {
+    @apply order-1 text-40 font-medium leading-50;
+    @apply tablet:text-48 tablet:leading-60 sm-laptop:order-none desktop:text-60 desktop:leading-[normal];
+  }
+
+  .s-hero__description {
+    @apply order-3 text-18 font-normal leading-26;
+    @apply tablet:text-20 tablet:leading-28 sm-laptop:order-none sm-laptop:max-w-498;
+  }
+
+  .s-hero__button {
+    @apply order-4 w-full py-20 px-35 rounded-[14px] text-20 leading-28;
+    @apply sm-laptop:order-none sm-laptop:w-auto;
+  }
+
+  .s-hero__illustration {
+    @apply order-2 w-full max-w-601 justify-self-center sm-laptop:order-none;
+
+    img {
+      @apply block w-full h-auto;
+    }
+  }
+
+  .s-hero__partners {
+    @apply grid grid-cols-2 gap-24 mt-40 bg-white;
+    @apply mobile:grid-cols-3 tablet:mt-60;
+    @apply sm-laptop:flex sm-laptop:items-center sm-laptop:justify-between sm-laptop:gap-16 desktop:mt-70;
+  }
+
+  .s-hero__partner {
+    @apply flex items-center justify-center min-w-0;
+
+    img {
+      @apply block max-w-full h-auto mix-blend-luminosity;
+    }
+  }
+}
