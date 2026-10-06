@@ -87,9 +87,14 @@
   }
 
   .s-process__description {
-    @apply mx-20 pt-24 pb-24 border-t border-primary text-16 font-normal leading-21;
-    @apply mobile:mx-30 tablet:mx-40 tablet:pt-30 tablet:pb-32 tablet:text-18 tablet:leading-23;
-    @apply desktop:mx-59 desktop:pb-40 desktop:min-h-131;
+    @apply relative px-20 pt-24 pb-24 text-16 font-normal leading-21;
+    @apply mobile:px-30 tablet:px-40 tablet:pt-30 tablet:pb-32 tablet:text-18 tablet:leading-23;
+    @apply desktop:px-59 desktop:pb-40;
+
+    &::before {
+      @apply content-[''] absolute top-0 inset-x-20 h-1 bg-primary pointer-events-none;
+      @apply mobile:inset-x-30 tablet:inset-x-40 desktop:inset-x-59;
+    }
 
     * {
       font-size: inherit;

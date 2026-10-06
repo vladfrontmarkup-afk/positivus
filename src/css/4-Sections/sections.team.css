@@ -9,6 +9,14 @@
     @apply grid gap-30 tablet:grid-cols-2 tablet:gap-40 desktop:grid-cols-3;
   }
 
+  .s-team__actions {
+    @apply flex justify-end mt-40;
+
+    .c-button {
+      @apply w-full mobile:w-269;
+    }
+  }
+
   .s-team__card {
     @apply flex flex-col p-24 border border-primary rounded-[45px] bg-white shadow-[0_5px_0_0_var(--color-primary)];
     @apply transition-colors duration-300 motion-reduce:transition-none;
