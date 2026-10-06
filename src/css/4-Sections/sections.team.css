@@ -1,0 +1,133 @@
+@layer components {
+  .s-team {
+    --team-portrait-flower: path("M83.8068 48.9117C116.649 86.3213 86.3213 116.649 48.9117 83.8068C11.5021 116.649 -18.8258 86.3213 14.0166 48.9117C-18.8258 11.5021 11.5021 -18.8258 48.9117 14.0166C86.3213 -18.8258 116.649 11.5021 83.8068 48.9117V48.9117Z");
+    --team-portrait-circle: path("M97.8234 48.9117C97.8234 75.925 75.925 97.8234 48.9117 97.8234C21.8984 97.8234 0 75.925 0 48.9117C0 21.8984 21.8984 0 48.9117 0C75.925 0 97.8234 21.8984 97.8234 48.9117V48.9117Z");
+    @apply my-40 tablet:my-60 desktop:my-80 text-black;
+  }
+
+  .s-team__grid {
+    @apply grid gap-30 tablet:grid-cols-2 tablet:gap-40 desktop:grid-cols-3;
+  }
+
+  .s-team__card {
+    @apply flex flex-col p-24 border border-primary rounded-[45px] bg-white shadow-[0_5px_0_0_var(--color-primary)];
+    @apply transition-colors duration-300 motion-reduce:transition-none;
+    @apply mobile:py-39 mobile:px-34 desktop:min-h-331;
+
+    &:is(:hover, :focus-visible) {
+      @apply bg-secondary;
+
+      .s-team__photo,
+      .s-team__portrait-shadow {
+        clip-path: var(--team-portrait-circle);
+      }
+    }
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-8 outline-primary;
+    }
+  }
+
+  .s-team__person {
+    @apply relative flex items-end gap-20 min-w-0;
+  }
+
+  .s-team__portrait {
+    @apply relative shrink-0 w-[102.8234px] h-[102.8234px];
+  }
+
+  .s-team__portrait--john {
+    @apply w-[105.6434px];
+
+    .s-team__portrait-shadow {
+      @apply left-[7.82px];
+    }
+  }
+
+  .s-team__photo,
+  .s-team__portrait-shadow {
+    @apply absolute size-[97.8234px];
+    @apply transition-[clip-path] duration-300 ease-in-out motion-reduce:transition-none;
+    mask-image: url('../../images/team/portrait-mask.svg');
+    mask-repeat: no-repeat;
+  }
+
+  .s-team__portrait-shadow {
+    @apply top-5 left-5 bg-dark-200;
+    mask-image: url('../../images/team/portrait-shadow.svg');
+  }
+
+  .s-team__photo {
+    @apply top-0 left-0 isolate;
+
+    &::after {
+      @apply content-[''] absolute inset-0 bg-secondary mix-blend-multiply pointer-events-none;
+    }
+  }
+
+  @supports (clip-path: path('M0 0H1V1Z')) {
+    .s-team__photo,
+    .s-team__portrait-shadow {
+      mask-image: none;
+      clip-path: var(--team-portrait-flower);
+    }
+  }
+
+  .s-team__image {
+    @apply absolute block max-w-none object-cover;
+  }
+
+  .s-team__portrait--john .s-team__image {
+    @apply w-107 h-161 -left-5 -top-14;
+  }
+
+  .s-team__portrait--jane .s-team__image {
+    @apply w-188 h-125 -left-51 -top-6;
+  }
+
+  .s-team__portrait--michael .s-team__image {
+    @apply w-208 h-139 -left-84 top-0;
+  }
+
+  .s-team__portrait--emily .s-team__image {
+    @apply w-284 h-426 -left-88 -top-158;
+  }
+
+  .s-team__portrait--brian .s-team__image {
+    @apply w-165 h-247 -left-36 -top-45 grayscale;
+  }
+
+  .s-team__portrait--sarah .s-team__image {
+    @apply size-105 -left-1 top-0 grayscale;
+  }
+
+  .s-team__identity {
+    @apply min-w-0 pt-35 tablet:pt-34 desktop:pt-30;
+  }
+
+  .s-team__name {
+    @apply w-fit max-w-full text-18 font-medium leading-23 tablet:text-20 tablet:leading-26;
+  }
+
+  .s-team__role {
+    @apply text-16 font-normal leading-21 tablet:text-18 tablet:leading-23;
+  }
+
+  .s-team__social {
+    @apply absolute block top-0 right-0;
+  }
+
+  .s-team__description {
+    @apply mt-28 pt-28 border-t border-black text-16 font-normal leading-21;
+    @apply tablet:text-18 tablet:leading-23;
+
+    * {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    p + p {
+      @apply mt-0;
+    }
+  }
+}
