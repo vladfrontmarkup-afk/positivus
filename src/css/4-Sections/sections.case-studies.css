@@ -1,0 +1,45 @@
+@layer components {
+  .s-case-studies {
+    @apply my-40 tablet:my-60 desktop:my-80;
+  }
+
+  .s-case-studies__list {
+    @apply grid gap-40 py-40 px-30 rounded-[45px] bg-primary text-white;
+    @apply tablet:p-40 sm-laptop:grid-cols-3 sm-laptop:gap-60 sm-laptop:py-50;
+    @apply desktop:max-w-1234 desktop:gap-128 desktop:py-70 desktop:px-60;
+  }
+
+  .s-case-studies__item {
+    @apply relative flex flex-col items-start gap-20 min-w-0;
+    @apply sm-laptop:min-h-186;
+
+    &:not(:last-child)::after {
+      @apply content-[''] absolute -bottom-20 inset-x-0 h-1 bg-white pointer-events-none;
+      @apply sm-laptop:top-0 sm-laptop:bottom-0 sm-laptop:left-auto sm-laptop:-right-30 sm-laptop:w-1 sm-laptop:h-auto;
+      @apply desktop:-right-64;
+    }
+  }
+
+  .s-case-studies__description {
+    @apply text-16 font-normal leading-21;
+    @apply tablet:text-18 tablet:leading-23;
+
+    * {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .s-case-studies__link-icon {
+    @apply relative block shrink-0 w-[17.321px] h-10;
+  }
+
+  .s-case-studies__arrow {
+    @apply absolute block max-w-none left-[-1.5px] top-[-4.994px];
+    @apply transition-transform duration-300 motion-reduce:transition-none;
+  }
+
+  .s-case-studies .c-button:is(:hover, :focus-visible) .s-case-studies__arrow {
+    @apply rotate-30;
+  }
+}
