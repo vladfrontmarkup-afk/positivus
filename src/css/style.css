@@ -12,6 +12,7 @@
 @import "./4-Sections/sections.contact.css";
 @import "./5-Organisms/organisms.css";
 @import "./5-Organisms/organisms.header.css";
+@import "./5-Organisms/organisms.footer.css";
 
 @source "../../index.html";
 @source "../js/app.js";
