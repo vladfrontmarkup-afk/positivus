@@ -1,6 +1,5 @@
 @import "./common.css";
 @import "./3-Components/components.button.css";
-@import "./4-Sections/sections.section.css";
 @import "./4-Sections/sections.hero.css";
 @import "./4-Sections/sections.heading.css";
 @import "./4-Sections/sections.services.css";
@@ -10,12 +9,10 @@
 @import "./4-Sections/sections.team.css";
 @import "./4-Sections/sections.testimonials.css";
 @import "./4-Sections/sections.contact.css";
-@import "./5-Organisms/organisms.css";
 @import "./5-Organisms/organisms.header.css";
 @import "./5-Organisms/organisms.footer.css";
 
 @source "../../index.html";
 @source "../js/app.js";
-@source "../js/components/example-section.js";
 @source "../js/components/header.js";
 @source "../js/components/process.js";

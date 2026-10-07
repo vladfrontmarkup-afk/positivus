@@ -1,6 +1,6 @@
 # Tailwind Starter
 
-A multi-page HTML, CSS and JavaScript starter powered by Tailwind CSS, Vite and jQuery.
+A single-page HTML, CSS and JavaScript website powered by Tailwind CSS and Vite.
 
 ## Requirements
 
@@ -54,9 +54,9 @@ Open [http://localhost:8002](http://localhost:8002). Serve the build over HTTP o
 
 - Tailwind CSS 4 with CSS-based configuration and Preflight.
 - Vite development server with hot module replacement.
-- Multiple HTML entry points with page-specific CSS and JavaScript.
+- One HTML entry point with modular CSS and JavaScript.
 - Shared base styles, local Space Grotesk fonts and reusable components.
-- jQuery available as a module and through browser globals.
+- Splide for the testimonials slider.
 - Relative production asset paths for deployment in subdirectories.
 
 ## Browser Support
