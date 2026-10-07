@@ -5,10 +5,12 @@ export function initHeader() {
   const toggle = header.querySelector('.js--header-toggle');
   const navigation = header.querySelector('.js--header-navigation');
   const button = header.querySelector('.js--header-button');
+  const portfolioBanner = header.querySelector('.js--portfolio-banner');
   let framePending = false;
 
   const updateScrollOffset = () => {
     document.documentElement.style.setProperty('--header-scroll-offset', `${Math.ceil(header.getBoundingClientRect().height)}px`);
+    header.style.setProperty('--portfolio-banner-height', `${portfolioBanner?.getBoundingClientRect().height ?? 0}px`);
   };
 
   const updateSticky = () => {

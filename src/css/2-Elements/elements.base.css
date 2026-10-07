@@ -21,3 +21,39 @@
     margin-top: 16px;
   }
 }
+
+@layer components {
+  .portfolio-banner {
+    @apply px-16 py-12 text-white;
+    background: #0f172a;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .portfolio-banner__inner {
+    @apply flex flex-col items-center justify-center gap-8 tablet:flex-row tablet:gap-24;
+  }
+
+  .portfolio-banner__label {
+    @apply text-12 leading-20 tracking-[0.08em] uppercase;
+    color: #cbd5e1;
+  }
+
+  .portfolio-banner__button {
+    @apply inline-flex items-center justify-center gap-8 px-16 py-10 rounded-[8px] border text-14 leading-20 font-bold text-center no-underline transition-[background-color,border-color,box-shadow] duration-300;
+    @apply motion-reduce:transition-none;
+    background: #7c3aed;
+    border-color: #a78bfa;
+    color: #ffffff;
+
+    &:hover {
+      background: #6d28d9;
+      border-color: #c4b5fd;
+      box-shadow: 0 4px 14px rgb(124 58 237 / 0.3);
+    }
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-4;
+      outline-color: #c4b5fd;
+    }
+  }
+}

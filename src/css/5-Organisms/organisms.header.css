@@ -38,7 +38,7 @@
 
   .o-header__navigation {
     /* Burger: 3 × 2px lines + 2 × 5px gaps + 2 × 14px padding = 44px. */
-    @apply invisible fixed top-[calc(44px_+_16px_*_2)] bottom-0 inset-x-0 flex flex-col items-stretch gap-24 px-24 py-24 bg-white opacity-0 pointer-events-none -translate-y-8 overflow-y-auto;
+    @apply invisible fixed top-[calc(var(--portfolio-banner-height,0px)_+_44px_+_16px_*_2)] bottom-0 inset-x-0 flex flex-col items-stretch gap-24 px-24 py-24 bg-white opacity-0 pointer-events-none -translate-y-8 overflow-y-auto;
     @apply shadow-[0_10px_20px_-12px_rgb(25_26_35/0.2)] transition-none;
     @apply sm-laptop:visible sm-laptop:static sm-laptop:flex-row sm-laptop:items-center sm-laptop:gap-20 sm-laptop:p-0 sm-laptop:opacity-100 sm-laptop:pointer-events-auto sm-laptop:translate-y-0 sm-laptop:shadow-none sm-laptop:overflow-visible;
     @apply desktop:gap-40;
@@ -86,7 +86,7 @@
     }
 
     .o-header__navigation {
-      @apply top-[calc(44px_+_8px_*_2)];
+      @apply top-[calc(var(--portfolio-banner-height,0px)_+_44px_+_8px_*_2)];
     }
 
     .o-header__logo {
