@@ -9,11 +9,11 @@
   }
 
   .c-button__primary {
-    @apply py-20 px-20 rounded-[14px] bg-primary text-white text-20 font-normal leading-28;
-    @apply mobile:px-35;
+    @apply py-16 px-20 rounded-[14px] bg-primary text-white text-18 font-normal leading-28;
+    @apply mobile:py-20 mobile:px-35 mobile:text-20;
 
     &:hover {
-      @apply opacity-75;
+      @apply bg-secondary text-black;
     }
 
     &:focus-visible {
@@ -22,7 +22,8 @@
   }
 
   .c-button__secondary {
-    @apply py-20 px-35 rounded-[14px] bg-secondary text-black text-20 font-normal leading-28;
+    @apply py-16 px-20 rounded-[14px] bg-secondary text-black text-18 font-normal leading-28;
+    @apply mobile:py-20 mobile:px-35 mobile:text-20;
 
     &:hover {
       @apply opacity-75;
@@ -34,8 +35,8 @@
   }
 
   .c-button__outline {
-    @apply py-20 px-35 border border-primary rounded-[14px] bg-transparent text-black text-20 font-normal leading-28 whitespace-nowrap;
-    @apply sm-laptop:px-24 sm-laptop:text-18 desktop:px-35 desktop:text-20;
+    @apply py-16 px-20 border border-primary rounded-[14px] bg-transparent text-black text-18 font-normal leading-28 whitespace-nowrap;
+    @apply mobile:py-20 mobile:px-35 mobile:text-20;
 
     &:hover {
       @apply bg-primary text-white;
@@ -47,7 +48,8 @@
   }
 
   .c-button__link-dark {
-    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-black text-20 font-normal leading-28;
+    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-black text-18 font-normal leading-28;
+    @apply mobile:text-20;
 
     &:hover {
       @apply opacity-75;
@@ -55,7 +57,8 @@
   }
 
   .c-button__link-light {
-    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-white text-20 font-normal leading-28;
+    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-white text-18 font-normal leading-28;
+    @apply mobile:text-20;
 
     &:hover {
       @apply opacity-75;
@@ -63,7 +66,8 @@
   }
 
   .c-button__link-secondary {
-    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-secondary text-20 font-normal leading-28;
+    @apply gap-15 p-0 border-0 rounded-none bg-transparent text-secondary text-18 font-normal leading-28;
+    @apply mobile:text-20;
 
     &:hover {
       @apply opacity-75;
