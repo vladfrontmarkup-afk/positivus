@@ -1,0 +1,85 @@
+@layer components {
+  .s-testimonials {
+    @apply my-40 tablet:my-60 desktop:my-80;
+  }
+
+  .s-testimonials__slider {
+    @apply overflow-hidden rounded-[30px] bg-primary text-white pt-40 pb-30;
+    @apply tablet:rounded-[45px] tablet:pt-60 tablet:pb-48 desktop:pt-84;
+  }
+
+  .s-testimonials__slide {
+    @apply flex flex-col;
+  }
+
+  .s-testimonials__quote {
+    @apply relative m-0 px-24 py-30 border border-secondary rounded-[30px];
+    @apply tablet:px-51 tablet:py-49 tablet:rounded-[45px];
+
+    &::after {
+      @apply content-[''] absolute -bottom-15 left-41 size-28 rotate-45;
+      @apply border-r border-b border-secondary bg-primary tablet:left-65 tablet:size-39 tablet:-bottom-20;
+    }
+  }
+
+  .s-testimonials__description {
+    @apply relative z-1 text-16 font-normal leading-21 tablet:text-18 tablet:leading-23;
+
+    * {
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .s-testimonials__author {
+    @apply mt-38 ml-48 mr-20 tablet:mt-48 tablet:ml-80 tablet:mr-0;
+  }
+
+  .s-testimonials__name {
+    @apply text-18 font-medium leading-23 text-secondary tablet:text-20 tablet:leading-26;
+  }
+
+  .s-testimonials__role {
+    @apply mt-0 text-16 font-normal leading-21 tablet:text-18 tablet:leading-23;
+  }
+
+  .s-testimonials__controls {
+    @apply relative flex items-center justify-between gap-12 max-w-608 mx-auto mt-40 px-10;
+    @apply tablet:mt-80 desktop:mt-114;
+  }
+
+  .s-testimonials__arrow {
+    @apply shrink-0 size-44 text-white hover:text-secondary;
+
+    &::before {
+      @apply content-[''] block w-23 h-[22.0919px] bg-current;
+      mask: url('../../images/testimonials/arrow-right.svg') center / contain no-repeat;
+    }
+  }
+
+  .s-testimonials__arrow--next::before {
+    @apply rotate-180;
+  }
+
+  .s-testimonials__pagination {
+    @apply flex-nowrap gap-0;
+  }
+
+  .s-testimonials__page {
+    @apply flex items-center justify-center w-26 h-44 cursor-pointer text-white mobile:w-30 tablet:w-33;
+    @apply transition-colors duration-300 motion-reduce:transition-none;
+
+    &::before {
+      @apply content-[''] block size-14 bg-current;
+      mask: url('../../images/testimonials/stars.svg') left center / 146px 14px no-repeat;
+    }
+
+    &:is(:hover, .is-active) {
+      @apply text-secondary;
+    }
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-2 outline-secondary rounded-[4px];
+    }
+  }
+}
