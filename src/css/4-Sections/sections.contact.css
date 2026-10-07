@@ -1,0 +1,80 @@
+@layer components {
+  .s-contact {
+    @apply my-40 tablet:my-60 desktop:my-80 text-black;
+  }
+
+  .s-contact__panel {
+    @apply relative overflow-hidden px-24 py-40 rounded-[45px] bg-grey-100;
+    @apply mobile:px-30 tablet:px-60 tablet:py-60 desktop:px-100 desktop:pb-80;
+  }
+
+  .s-contact__form {
+    @apply relative z-1 flex flex-col gap-30 w-full tablet:gap-40 sm-laptop:max-w-556;
+
+    .c-button {
+      @apply w-full;
+    }
+  }
+
+  .s-contact__options {
+    @apply flex flex-wrap items-center gap-x-24 gap-y-16 min-w-0 tablet:gap-x-35;
+  }
+
+  .s-contact__option {
+    @apply relative inline-flex items-center gap-14 cursor-pointer text-16 leading-23 tablet:text-18;
+  }
+
+  .s-contact__radio {
+    @apply sr-only;
+
+    &:checked + .s-contact__radio-icon::after {
+      @apply scale-100;
+    }
+
+    &:focus-visible + .s-contact__radio-icon {
+      @apply outline-2 outline-offset-4 outline-primary;
+    }
+  }
+
+  .s-contact__radio-icon {
+    @apply grid place-items-center shrink-0 size-28 border border-black rounded-full bg-white;
+    @apply transition-colors duration-300 motion-reduce:transition-none;
+
+    &::after {
+      @apply content-[''] block size-16 rounded-full bg-secondary scale-0;
+      @apply transition-transform duration-300 motion-reduce:transition-none;
+    }
+  }
+
+  .s-contact__option:hover .s-contact__radio-icon {
+    @apply bg-secondary/20;
+  }
+
+  .s-contact__fields {
+    @apply flex flex-col gap-25;
+  }
+
+  .s-contact__field {
+    @apply flex flex-col gap-5 min-w-0 text-16 font-normal leading-28;
+  }
+
+  .s-contact__input {
+    @apply block w-full min-w-0 px-20 py-17 border border-black rounded-[14px] bg-white;
+    @apply text-16 font-normal leading-23 placeholder:text-grey-500 placeholder:opacity-100;
+    @apply transition-[border-color,box-shadow] duration-300 motion-reduce:transition-none;
+    @apply tablet:px-30 tablet:text-18;
+
+    &:focus-visible {
+      @apply outline-2 outline-offset-2 outline-primary;
+    }
+  }
+
+  .s-contact__input--message {
+    @apply min-h-190 resize-y;
+  }
+
+  .s-contact__illustration {
+    @apply hidden absolute top-1/2 -translate-y-1/2 max-w-none pointer-events-none;
+    @apply sm-laptop:block sm-laptop:left-[calc(100%_-_260px)] desktop:left-[calc(100%_-_367px)];
+  }
+}

@@ -613,6 +613,43 @@
           </div>
         </div>
       </section>
+      <section class="s-contact" aria-label="Contact form">
+        <div class="container">
+          <div class="s-contact__panel">
+            <form class="s-contact__form js--contact-form" action="#" method="post">
+              <fieldset class="s-contact__options">
+                <legend class="sr-only">Reason for contacting us</legend>
+                <label class="s-contact__option">
+                  <input class="s-contact__radio" type="radio" name="contact-reason" value="say-hi" checked>
+                  <span class="s-contact__radio-icon" aria-hidden="true"></span>
+                  <span>Say Hi</span>
+                </label>
+                <label class="s-contact__option">
+                  <input class="s-contact__radio" type="radio" name="contact-reason" value="get-a-quote">
+                  <span class="s-contact__radio-icon" aria-hidden="true"></span>
+                  <span>Get a Quote</span>
+                </label>
+              </fieldset>
+              <div class="s-contact__fields">
+                <label class="s-contact__field">
+                  <span>Name</span>
+                  <input class="s-contact__input" type="text" name="name" placeholder="Name" autocomplete="name">
+                </label>
+                <label class="s-contact__field">
+                  <span>Email*</span>
+                  <input class="s-contact__input" type="email" name="email" placeholder="Email" autocomplete="email" required>
+                </label>
+                <label class="s-contact__field">
+                  <span>Message*</span>
+                  <textarea class="s-contact__input s-contact__input--message" name="message" placeholder="Message" rows="6" required></textarea>
+                </label>
+              </div>
+              <button class="c-button c-button__primary" type="submit">Send Message</button>
+            </form>
+            <img class="s-contact__illustration" src="/src/images/contact-illustration.svg" alt="" width="691.570129" height="648.000061" loading="lazy" aria-hidden="true">
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
