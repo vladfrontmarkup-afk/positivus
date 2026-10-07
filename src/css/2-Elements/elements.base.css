@@ -1,4 +1,9 @@
 @layer base {
+  html {
+    @apply scroll-smooth motion-reduce:scroll-auto;
+    scroll-padding-top: var(--header-scroll-offset, 0px);
+  }
+
   /* Preserve the previous body size: text-2md was 24px. */
   body {
     @apply font-default text-24 text-black;

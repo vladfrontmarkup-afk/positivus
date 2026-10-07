@@ -7,6 +7,10 @@ export function initHeader() {
   const button = header.querySelector('.js--header-button');
   let framePending = false;
 
+  const updateScrollOffset = () => {
+    document.documentElement.style.setProperty('--header-scroll-offset', `${Math.ceil(header.getBoundingClientRect().height)}px`);
+  };
+
   const updateSticky = () => {
     const isSticky = window.scrollY > 0;
     header.classList.toggle('o-header--sticky', isSticky);
@@ -57,4 +61,6 @@ export function initHeader() {
   });
 
   updateSticky();
+  updateScrollOffset();
+  new ResizeObserver(updateScrollOffset).observe(header);
 }

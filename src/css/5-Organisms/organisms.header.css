@@ -42,6 +42,10 @@
     @apply shadow-[0_10px_20px_-12px_rgb(25_26_35/0.2)] transition-none;
     @apply sm-laptop:visible sm-laptop:static sm-laptop:flex-row sm-laptop:items-center sm-laptop:gap-20 sm-laptop:p-0 sm-laptop:opacity-100 sm-laptop:pointer-events-auto sm-laptop:translate-y-0 sm-laptop:shadow-none sm-laptop:overflow-visible;
     @apply desktop:gap-40;
+    
+    .c-button__outline {
+
+    }
   }
 
   .o-header--menu-animated {
@@ -52,12 +56,13 @@
   }
 
   .o-header__list {
-    @apply flex flex-col gap-16 sm-laptop:flex-row sm-laptop:items-center desktop:gap-40;
+    @apply flex flex-col gap-16 sm-laptop:flex-row sm-laptop:items-center sm-laptop:gap-12 desktop:gap-20;
   }
 
   .o-header__link {
     @apply block py-4 text-20 leading-28 whitespace-nowrap underline underline-offset-4 decoration-transparent transition-[color,text-decoration-color] duration-300;
-    @apply sm-laptop:py-0 sm-laptop:text-18 desktop:text-20 motion-reduce:transition-none;
+    @apply sm-laptop:py-0 sm-laptop:text-14 desktop:text-18 motion-reduce:transition-none;
+    @apply l-desktop:text-20;
 
     &:hover {
       @apply decoration-current;

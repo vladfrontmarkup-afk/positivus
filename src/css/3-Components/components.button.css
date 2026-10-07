@@ -36,7 +36,7 @@
 
   .c-button__outline {
     @apply py-16 px-20 border border-primary rounded-[14px] bg-transparent text-black text-18 font-normal leading-28 whitespace-nowrap;
-    @apply mobile:py-20 mobile:px-35 mobile:text-20;
+    @apply desktop:py-20 desktop:px-35 desktop:text-20;
 
     &:hover {
       @apply bg-primary text-white;
