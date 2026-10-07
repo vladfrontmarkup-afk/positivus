@@ -31,6 +31,8 @@ npm run build
 
 Deploy the complete contents of `dist/` to a static web server. Node.js is not required on the production server.
 
+Build assets are grouped in `dist/assets/css`, `js`, `fonts` and `images`. Images keep their source filenames and the folder structure from `src/images`; small assets are emitted as files rather than inlined. CSS, JavaScript and font filenames retain content hashes for cache invalidation. Configure image caching to revalidate changed files because their URLs remain unchanged between builds.
+
 To preview the build locally:
 
 ```sh
