@@ -38,6 +38,10 @@
     color: #f2fbf9;
   }
 
+  .portfolio-banner__icon {
+    @apply block size-18 shrink-0;
+  }
+
   .portfolio-banner__button {
     @apply inline-flex items-center justify-center gap-8 px-20 py-6 rounded-[14px] border text-14 leading-24 font-bold text-center no-underline transition-[box-shadow,translate,filter] duration-300;
     @apply tablet:text-16 motion-reduce:transition-none;
