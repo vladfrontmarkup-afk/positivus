@@ -24,36 +24,36 @@
 
 @layer components {
   .portfolio-banner {
-    @apply px-16 py-12 text-white;
-    background: #0f172a;
+    @apply px-16 py-10 text-white;
+    background: linear-gradient(180deg, #071317, #09161a);
     font-family: Arial, Helvetica, sans-serif;
   }
 
   .portfolio-banner__inner {
-    @apply flex flex-col items-center justify-center gap-8 tablet:flex-row tablet:gap-24;
+    @apply flex flex-col items-center justify-center gap-6 tablet:flex-row tablet:gap-24;
   }
 
   .portfolio-banner__label {
-    @apply text-12 leading-20 tracking-[0.08em] uppercase;
-    color: #cbd5e1;
+    @apply text-14 leading-24 tracking-[0.08em] uppercase tablet:text-16;
+    color: #f2fbf9;
   }
 
   .portfolio-banner__button {
-    @apply inline-flex items-center justify-center gap-8 px-16 py-10 rounded-[8px] border text-14 leading-20 font-bold text-center no-underline transition-[background-color,border-color,box-shadow] duration-300;
-    @apply motion-reduce:transition-none;
-    background: #7c3aed;
-    border-color: #a78bfa;
-    color: #ffffff;
+    @apply inline-flex items-center justify-center gap-8 px-20 py-6 rounded-[14px] border text-14 leading-24 font-bold text-center no-underline transition-[box-shadow,translate,filter] duration-300;
+    @apply tablet:text-16 motion-reduce:transition-none;
+    background: linear-gradient(135deg, #5bffe0, #36f0d0 45%, #14c4b0);
+    border-color: #49f4d2;
+    color: #041012;
+    box-shadow: 0 10px 24px rgb(40 230 200 / 0.22), 0 0 32px rgb(40 230 200 / 0.12);
 
     &:hover {
-      background: #6d28d9;
-      border-color: #c4b5fd;
-      box-shadow: 0 4px 14px rgb(124 58 237 / 0.3);
+      @apply -translate-y-1 brightness-110 motion-reduce:translate-y-0;
+      box-shadow: 0 0 16px rgb(73 244 210 / 0.55), 0 0 40px rgb(73 244 210 / 0.28), 0 10px 24px rgb(40 230 200 / 0.22);
     }
 
     &:focus-visible {
       @apply outline-2 outline-offset-4;
-      outline-color: #c4b5fd;
+      outline-color: #49f4d2;
     }
   }
 }
