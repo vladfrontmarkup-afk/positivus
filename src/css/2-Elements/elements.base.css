@@ -30,12 +30,7 @@
   }
 
   .portfolio-banner__inner {
-    @apply flex flex-col items-center justify-center gap-6 tablet:flex-row tablet:gap-24;
-  }
-
-  .portfolio-banner__label {
-    @apply text-14 leading-24 tracking-[0.08em] uppercase tablet:text-16;
-    color: #f2fbf9;
+    @apply flex items-center justify-center;
   }
 
   .portfolio-banner__icon {
