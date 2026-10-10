@@ -4,13 +4,14 @@
   }
 
   .s-hero__intro {
-    @apply grid gap-28 items-start;
-    @apply tablet:gap-35 sm-laptop:grid-cols-[minmax(0,1fr)_minmax(0,1.13fr)] sm-laptop:gap-40;
-    @apply desktop:grid-cols-[531px_601px] desktop:gap-108;
+    @apply flex flex-col gap-28;
+    @apply tablet:gap-35 sm-laptop:flex-row sm-laptop:items-start sm-laptop:gap-40;
+    @apply desktop:gap-108;
   }
 
   .s-hero__content {
     @apply contents sm-laptop:flex sm-laptop:flex-col sm-laptop:items-start sm-laptop:gap-35;
+    @apply sm-laptop:min-w-0 sm-laptop:flex-[1_1_0%] desktop:w-531 desktop:flex-none;
   }
 
   .s-hero__title {
@@ -29,7 +30,8 @@
   }
 
   .s-hero__illustration {
-    @apply order-2 w-full max-w-601 justify-self-center sm-laptop:order-none;
+    @apply order-2 w-full max-w-601 self-center sm-laptop:order-none;
+    @apply sm-laptop:min-w-0 sm-laptop:flex-[1.13_1_0%] sm-laptop:self-start desktop:w-601 desktop:flex-none;
 
     img {
       @apply block w-full h-auto;
